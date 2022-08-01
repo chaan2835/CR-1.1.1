@@ -25,7 +25,7 @@ pipeline {
 								credentialsId: 'b4b22ac4-cc33-444a-a50c-945f6eb4edc8',
 								groupId: 'com.github.javaparser',
 								nexusUrl: '172.31.33.156:8081',
-								nexusVersion: 'nexus3',
+								nexusVersion: 'nexus2',
 								protocol: 'http',
 								repository: 'CR-1.1.1',
 								version: '3.23.1'
