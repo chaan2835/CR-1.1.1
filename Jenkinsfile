@@ -10,6 +10,13 @@ pipeline {
 							sh 'mvn clean package'
 					       			}
 						}
+			
+			stage ('pwd showing') {
+				def workspace = WORKSPACE
+				workspace = env.WORKSPACE
+				echo "Current workspace is ${env.WORKSPACE}"
+				echo "Current workspace is $WORKSPACE"
+			}
 				stage ('artifact upload') {
 							
 							steps {
