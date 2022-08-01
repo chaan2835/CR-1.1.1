@@ -17,8 +17,7 @@ pipeline {
         			archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
    				 }
 			}
-		}
-				stage ('artifact upload') {
+						stage ('artifact upload') {
 							
 							steps {
 								nexusArtifactUploader artifacts: 
