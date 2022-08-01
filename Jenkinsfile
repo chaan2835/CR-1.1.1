@@ -13,7 +13,7 @@ pipeline {
 			
 				stage('packaging') {
 					steps{
-        			sh "./mvnw package -Pprod -DskipTests"
+        			sh "./mvn package -Pprod -DskipTests"
         			archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
    				 }
 			}
