@@ -17,8 +17,7 @@ pipeline {
 								[
 									[
 										artifactId: 'javaparser-core', 
-										classifier: '', file:
-										'target/', 
+										classifier: '', file:'target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar', 
 										type: 'jar'
 									]
 								], 
