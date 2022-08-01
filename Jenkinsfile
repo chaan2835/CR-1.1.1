@@ -12,10 +12,11 @@ pipeline {
 						}
 			
 			stage ('pwd showing') {
-				def workspace = WORKSPACE
-				workspace = env.WORKSPACE
-				echo "Current workspace is ${env.WORKSPACE}"
-				echo "Current workspace is $WORKSPACE"
+				steps {
+					script {
+    					def reportPath = "${WORKSPACE}/target/report"
+    						  }
+					}
 			}
 				stage ('artifact upload') {
 							
