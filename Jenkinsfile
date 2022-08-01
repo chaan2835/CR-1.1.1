@@ -11,13 +11,10 @@ pipeline {
 					       			}
 						}
 			
-			stage ('pwd showing') {
-				steps {
-					script {
-    					def reportPath = "${WORKSPACE}/target/report"
-						echo "pwd=$reportpath"
-    						  }
-					}
+				stage('packaging') {
+        			sh "./mvnw package -Pprod -DskipTests"
+        			archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+   				 }
 			}
 				stage ('artifact upload') {
 							
