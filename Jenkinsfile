@@ -11,12 +11,7 @@ pipeline {
 					       			}
 						}
 			
-				stage('packaging') {
-					steps{
-        			sh "./mvn package -Pprod -DskipTests"
-        			archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-   				 }
-			}
+			
 						stage ('artifact upload') {
 							
 							steps {
